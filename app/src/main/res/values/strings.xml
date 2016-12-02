@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">Retrofit Rx Practise</string>
+    <string name="login">login</string>
+    <string name="sign_in">SIGN IN</string>
 </resources>
