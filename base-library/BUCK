@@ -1,0 +1,142 @@
+android_resource(
+	name = 'res_main',
+	res = 'src/main/res',
+	package = 'com.example.base_library',
+	resource_union = True,
+	deps = [
+		'//.okbuck/cache:com.android.support.animated-vector-drawable-24.2.1.aar',
+		'//.okbuck/cache:com.android.support.appcompat-v7-24.2.1.aar',
+		'//.okbuck/cache:com.android.support.cardview-v7-24.2.1.aar',
+		'//.okbuck/cache:com.android.support.design-24.2.1.aar',
+		'//.okbuck/cache:com.android.support.recyclerview-v7-24.2.1.aar',
+		'//.okbuck/cache:com.android.support.support-compat-24.2.1.aar',
+		'//.okbuck/cache:com.android.support.support-core-ui-24.2.1.aar',
+		'//.okbuck/cache:com.android.support.support-core-utils-24.2.1.aar',
+		'//.okbuck/cache:com.android.support.support-fragment-24.2.1.aar',
+		'//.okbuck/cache:com.android.support.support-media-compat-24.2.1.aar',
+		'//.okbuck/cache:com.android.support.support-v13-24.2.1.aar',
+		'//.okbuck/cache:com.android.support.support-v4-24.2.1.aar',
+		'//.okbuck/cache:com.android.support.support-vector-drawable-24.2.1.aar',
+		'//.okbuck/cache:com.github.bumptech.glide.okhttp3-integration-1.4.0.aar',
+		'//.okbuck/cache:com.jakewharton.rxbinding.rxbinding-0.4.0.aar',
+		'//.okbuck/cache:io.reactivex.rxandroid-1.2.1.aar',
+	],
+	visibility = [
+		'PUBLIC',
+	],
+)
+
+android_build_config(
+	name = 'build_config_debug',
+	package = 'com.example.base_library',
+	values = [
+		'String APPLICATION_ID = "com.example.base_library"',
+		'String BUILD_TYPE = "debug"',
+		'String FLAVOR = ""',
+		'int VERSION_CODE = 1',
+		'String VERSION_NAME = "1.0"',
+	],
+	visibility = [
+		'PUBLIC',
+	],
+)
+
+android_library(
+	name = 'src_debug',
+	srcs = glob([
+		'src/main/java/**/*.java',
+	]),
+	manifest = 'build/okbuck/debug/AndroidManifest.xml',
+	source = '7',
+	target = '7',
+	deps = [
+		'//.okbuck/cache:com.android.support.animated-vector-drawable-24.2.1.aar',
+		'//.okbuck/cache:com.android.support.appcompat-v7-24.2.1.aar',
+		'//.okbuck/cache:com.android.support.cardview-v7-24.2.1.aar',
+		'//.okbuck/cache:com.android.support.design-24.2.1.aar',
+		'//.okbuck/cache:com.android.support.recyclerview-v7-24.2.1.aar',
+		'//.okbuck/cache:com.android.support.support-annotations-24.2.1.jar',
+		'//.okbuck/cache:com.android.support.support-compat-24.2.1.aar',
+		'//.okbuck/cache:com.android.support.support-core-ui-24.2.1.aar',
+		'//.okbuck/cache:com.android.support.support-core-utils-24.2.1.aar',
+		'//.okbuck/cache:com.android.support.support-fragment-24.2.1.aar',
+		'//.okbuck/cache:com.android.support.support-media-compat-24.2.1.aar',
+		'//.okbuck/cache:com.android.support.support-v13-24.2.1.aar',
+		'//.okbuck/cache:com.android.support.support-v4-24.2.1.aar',
+		'//.okbuck/cache:com.android.support.support-vector-drawable-24.2.1.aar',
+		'//.okbuck/cache:com.github.bumptech.glide.glide-3.7.0.jar',
+		'//.okbuck/cache:com.github.bumptech.glide.okhttp3-integration-1.4.0.aar',
+		'//.okbuck/cache:com.google.code.gson.gson-2.7.jar',
+		'//.okbuck/cache:com.jakewharton.rxbinding.rxbinding-0.4.0.aar',
+		'//.okbuck/cache:com.squareup.okhttp3.okhttp-3.4.1.jar',
+		'//.okbuck/cache:com.squareup.okio.okio-1.9.0.jar',
+		'//.okbuck/cache:com.squareup.retrofit2.adapter-rxjava-2.0.0.jar',
+		'//.okbuck/cache:com.squareup.retrofit2.converter-gson-2.1.0.jar',
+		'//.okbuck/cache:com.squareup.retrofit2.retrofit-2.1.0.jar',
+		'//.okbuck/cache:io.reactivex.rxandroid-1.2.1.aar',
+		'//.okbuck/cache:io.reactivex.rxjava-1.2.1.jar',
+		':build_config_debug',
+		':res_main',
+	],
+	visibility = [
+		'PUBLIC',
+	],
+)
+
+android_build_config(
+	name = 'build_config_release',
+	package = 'com.example.base_library',
+	values = [
+		'String APPLICATION_ID = "com.example.base_library"',
+		'String BUILD_TYPE = "release"',
+		'String FLAVOR = ""',
+		'int VERSION_CODE = 1',
+		'String VERSION_NAME = "1.0"',
+	],
+	visibility = [
+		'PUBLIC',
+	],
+)
+
+android_library(
+	name = 'src_release',
+	srcs = glob([
+		'src/main/java/**/*.java',
+	]),
+	manifest = 'build/okbuck/release/AndroidManifest.xml',
+	source = '7',
+	target = '7',
+	deps = [
+		'//.okbuck/cache:com.android.support.animated-vector-drawable-24.2.1.aar',
+		'//.okbuck/cache:com.android.support.appcompat-v7-24.2.1.aar',
+		'//.okbuck/cache:com.android.support.cardview-v7-24.2.1.aar',
+		'//.okbuck/cache:com.android.support.design-24.2.1.aar',
+		'//.okbuck/cache:com.android.support.recyclerview-v7-24.2.1.aar',
+		'//.okbuck/cache:com.android.support.support-annotations-24.2.1.jar',
+		'//.okbuck/cache:com.android.support.support-compat-24.2.1.aar',
+		'//.okbuck/cache:com.android.support.support-core-ui-24.2.1.aar',
+		'//.okbuck/cache:com.android.support.support-core-utils-24.2.1.aar',
+		'//.okbuck/cache:com.android.support.support-fragment-24.2.1.aar',
+		'//.okbuck/cache:com.android.support.support-media-compat-24.2.1.aar',
+		'//.okbuck/cache:com.android.support.support-v13-24.2.1.aar',
+		'//.okbuck/cache:com.android.support.support-v4-24.2.1.aar',
+		'//.okbuck/cache:com.android.support.support-vector-drawable-24.2.1.aar',
+		'//.okbuck/cache:com.github.bumptech.glide.glide-3.7.0.jar',
+		'//.okbuck/cache:com.github.bumptech.glide.okhttp3-integration-1.4.0.aar',
+		'//.okbuck/cache:com.google.code.gson.gson-2.7.jar',
+		'//.okbuck/cache:com.jakewharton.rxbinding.rxbinding-0.4.0.aar',
+		'//.okbuck/cache:com.squareup.okhttp3.okhttp-3.4.1.jar',
+		'//.okbuck/cache:com.squareup.okio.okio-1.9.0.jar',
+		'//.okbuck/cache:com.squareup.retrofit2.adapter-rxjava-2.0.0.jar',
+		'//.okbuck/cache:com.squareup.retrofit2.converter-gson-2.1.0.jar',
+		'//.okbuck/cache:com.squareup.retrofit2.retrofit-2.1.0.jar',
+		'//.okbuck/cache:io.reactivex.rxandroid-1.2.1.aar',
+		'//.okbuck/cache:io.reactivex.rxjava-1.2.1.jar',
+		':build_config_release',
+		':res_main',
+	],
+	visibility = [
+		'PUBLIC',
+	],
+)
+
