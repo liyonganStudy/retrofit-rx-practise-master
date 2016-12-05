@@ -2,4 +2,7 @@
     <string name="app_name">Retrofit Rx Practise</string>
     <string name="login">login</string>
     <string name="sign_in">SIGN IN</string>
+    <string name="logining">登录中。。。</string>
+    <string name="loginError">登录失败，请重试</string>
+    <string name="exit">exit</string>
 </resources>
